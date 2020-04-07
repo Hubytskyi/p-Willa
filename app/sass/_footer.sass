@@ -1,0 +1,72 @@
+.footer
+	margin-bottom: 5vw
+
+.footer__box
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+
+.footer__box--left
+	text-align: right
+
+.footer__box--left,
+.footer__box--right
+	letter-spacing: .65vh
+
+.footer__text,
+.link__footer
+	color: $bluecolor
+	display: block
+	font-size: .9vw
+	font-family: poppinssemibold
+	&:first-child
+		margin-bottom: 1vw
+
+.link__footer:hover
+	color: $bluecolor
+
+.footer__willa-circle
+	max-width: 9.4vw
+	margin: 0 2vw
+
+@media screen and (max-width: 767px)
+	.footer__willa-circle
+		margin: 0 42px
+		max-width: 18vh
+
+	.footer__text,
+	.link__footer
+		font-size: 10px
+		line-height: 25px
+
+@media screen and (max-width: 767px)
+	.footer
+		margin-bottom: 34px
+
+	.footer__box
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		padding: 0 15px
+	
+	.footer__willa-circle
+		margin: 0 0 9px 0
+		width: 70px
+		height: 70px
+
+	.footer__box--left
+		text-align: left
+		order: 1
+
+	.footer__box--right
+		order: 2
+
+	.footer__text,
+	.link__footer
+		font-size: 10px
+		letter-spacing: 4px
+
+	.footer__text,
+	.link__footer:first-child
+		margin-bottom: 9px

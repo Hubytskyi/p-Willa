@@ -1,0 +1,430 @@
+// ___ Head Section ___
+
+.podcast__head
+	font-family: gothambold
+	height: 98vh
+	background: $bluecolor
+	color: #fff
+	position: relative
+	margin-top: 3vh
+	&::after
+		content: ''
+		background: $accent
+		width: 24.5vw
+		height: 24.5vw
+		border-radius: 100%
+		position: absolute
+		left: 29vw
+		top: 13vh
+
+.podcast__head-title
+	margin-top: 30vh
+	z-index: 998
+
+.podcast__head-title-item
+	font-size: 6.15vw
+	max-width: 36vw
+	line-height: 6vw
+	letter-spacing: .35vw
+	margin-bottom: 0
+
+.podcast__head-subtitle-item
+	display: block
+	font-size: 3vw
+	line-height: 3.5vw
+	color: #FFB2B2
+	margin-top: 1.5vw
+
+.podcast__head--right
+	position: absolute
+	height: 98vh
+	width: 100%
+	top: 0
+	overflow: hidden
+
+.podcast__head-list--right
+	height: 100%
+	overflow: hidden
+	position: absolute
+	right: -200px
+
+.podcast__head-item
+	font-size: 86px
+	line-height: 64px
+	text-shadow: 1px 1px 1px #FFB2B2, 0 1px 1px #FFB2B2, -1px 0 1px #FFB2B2, 0 -1px 1px #FFB2B2
+	color: $bluecolor
+	font-family: gothammedium
+
+.podcast__head-item--active
+	color: #FFB2B2
+
+.go-to__box.go-to__media-page
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	bottom: 15vh
+	z-index: 999
+
+.item__skew--hover.go-to__media-page
+	&::after
+		background: #fff
+
+.link__circle.link__circle--media-page
+	color: #fff
+	&:hover
+		color: #fff
+	&::after
+		border: 1px solid #fff
+
+// ___ Text Section ___
+
+.podcast__text
+	text-align: center
+	max-width: 57vw
+	margin: 5.4vw auto 5.8vw
+
+.podcast__text-descr
+	font-size: 1.1vw
+	margin-top: 3vw
+	line-height: 1.6vw
+
+// ___ ITEMS Section ___
+
+.podcast__items
+	display: flex
+	flex-direction: column-reverse
+	
+.podcast__item-container
+	color: #fff
+	background: $bluecolor
+	position: relative
+	margin-bottom: 10.7vw
+	margin-top: 2vw
+
+.podcast__item-container
+	&:first-child
+		margin-top: 0
+		margin-bottom: 3.5vw
+
+.podcast__item--left
+	padding: 3.5vw 0 3.5vw 7vw
+
+.podcast__episode
+	font-family: poppinssemibold
+	letter-spacing: 8px
+	text-transform: uppercase
+
+.podcast__item-title
+	max-width: 40vw
+	font-size: 1.85vw
+	line-height: 2.2vw
+	font-family: gothambold
+	margin: 
+		top: 2.4vw
+		bottom: .7vw
+
+.podcast__item-subtitle
+	color: #F4E2E3
+	margin-bottom: 5.7vw
+	font-family: poppinsmedium
+	font-size: 1.4vw
+
+.podcast__item-cat
+	font-family: gothambold
+	font-size: 1.4vw
+	line-height: 1.7vw
+
+.podcast__item--right
+	position: absolute
+	right: 0
+	top: 0
+	height: 100%
+	// display: flex
+	// justify-content: center
+
+.podcast__item-img
+	position: absolute
+	bottom: 0
+	z-index: 999
+	right: 7vw
+	max-width: 29vw
+
+.podcast__item-list
+	position: absolute
+	right: 3vh
+	overflow: hidden
+	z-index: 998
+	background: #F7B1B3
+	height: 24vw
+	width: 24vw
+	border-radius: 100%
+	margin-top: -2vh
+
+.podcast__item-elem
+	font-size: 3.5vw
+	line-height: 2.7vw
+	text-shadow: 1px 1px 1px $bluecolor, 0 1px 1px $bluecolor, -1px 0 1px $bluecolor, 0 -1px 1px $bluecolor
+	color: #F7B1B3
+	font-family: gothammedium
+	position: relative
+	right: -50%
+
+.podcast__item-elem--active
+	color: transparent
+
+.podcast__container-play
+	background: #fff
+	width: 100%
+	color: #000
+	padding: .5vh
+
+.podcast__item-play
+	background: #f1f1f1
+	padding: 2vw
+	display: flex
+	justify-content: space-between
+
+.podcast__svg-play
+	width: 3.5vw
+	fill: #ed472f
+	margin-right: 2vw
+
+.podcast__play-name
+	font-size: 2.18vw
+	font-family: condor
+
+.play
+	cursor: pointer
+	display: flex
+	align-items: center
+
+.soundcloud
+	display: flex
+	align-items: center
+	&__img
+		max-width: 17vw
+		opacity: 0.5
+
+.podcast__items
+	.podcast__item-container:nth-child(even)
+		background: #F7B1B3
+		.podcast__item--right
+			.podcast__item-list
+				background: $bluecolor
+				.podcast__item-elem
+					text-shadow: 1px 1px 1px #F7B1B3, 0 1px 1px #F7B1B3, -1px 0 1px #F7B1B3, 0 -1px 1px #FFB2B2
+					color: $bluecolor
+				.podcast__item-elem--active
+					color: transparent
+
+// ___ Columns Section ___
+
+.podcast__columns
+	margin-bottom: 13.3vh
+
+.podcast__column
+	position: relative
+	&::after
+		content: ''
+		background: $bluecolor
+		position: absolute
+		right: -3vh
+		top: 3vw
+		width: 15vw
+		height: 15vw
+		border-radius: 100%
+		z-index: -1
+
+.column
+	&__img
+		width: 100%
+	&__name
+		margin: 1.8vw 0
+		font-size: 1vw
+		font-family: poppinssemibold
+		text-transform: uppercase
+	&__text
+		font-family: poppinsregular
+		font-size: 1vw
+		line-height: 1.6vw
+
+@media screen and (max-width: 1100px)
+
+	.podcast__head,
+	.podcast__head--right
+		height: 75vh
+
+	.podcast__head-item
+		font-size: 64px
+		line-height: 48px
+
+	.podcast__text-descr
+		font-size: 1.5vw
+
+@media screen and (max-width: 767px)
+
+	// __ Head Section __
+
+	.podcast__head
+		margin-top: 42px
+		height: 63vh
+
+	.podcast__head-list--right
+		right: -170px
+		height: 63vh
+
+	.podcast__head-item
+		font-size: 50px
+		line-height: 38px
+
+	.podcast__column
+		&::after
+			right: 0
+
+	.podcast__head
+		&::after
+			width: 163px
+			height: 163px
+			top: 7vh
+
+	.podcast__head-title
+		margin-top: 85px
+		padding-left: 15px
+
+	.podcast__head-title-item
+		font-size: 41px
+		line-height: 49px
+		letter-spacing: 1.29px
+		max-width: 50vw
+
+	.podcast__head-subtitle-item
+		font-size: 12px
+		line-height: 14px
+		letter-spacing: 0.38px
+		margin-top: 10px
+
+	.go-to__media-page
+		bottom: 10vh
+
+	.go-to__box.go-to__media-page
+		bottom: 8vh
+		
+	// __ Text Section __
+
+	.podcast__text
+		max-width: 100%
+		text-align: left
+		margin: 31px 0 50px 0
+	
+	.podcast__text-descr
+		margin-top: 31px
+		font-size: 14px
+		line-height: 21px
+		letter-spacing: 0
+
+	// ___ ITEMS Section ___
+
+	.podcast__items
+		padding: 0 15px
+
+	.podcast__item-container
+		margin-bottom: 13vh
+	
+	.podcast__episode
+		font-size: 10px
+		line-height: 16px
+		letter-spacing: 4.1px
+
+	.podcast__item-title
+		max-width: 85vw
+		font-size: 20px
+		line-height: 25px
+		letter-spacing: 0
+		margin-top: 109px
+		margin-bottom: 8px
+
+	.podcast__item-subtitle
+		margin-bottom: 26px
+		font-size: 14px
+		line-height: 21px
+		letter-spacing: 0
+	
+	.podcast__item-cat
+		font-size: 12px
+		line-height: 14px
+		letter-spacing: 0
+
+	.podcast__item-img
+		max-height: 26vh
+		max-width: 48vw
+		right: 40px
+		bottom: 55%
+
+	.podcast__item-list
+		right: 0
+		width: 160px
+		height: 160px
+	
+	.podcast__item-elem
+		font-size: 24px
+		line-height: 20px
+
+	.podcast__item--left
+		padding: 32px 0 32px 19px
+
+	.podcast__container-play
+		padding: 0.3vh
+	
+	.podcast__item-play
+		padding: 1vh
+
+	.podcast__play-name
+		font-size: 12px
+
+	.podcast__svg-play
+		width: 3vh
+		margin-right: 1vh
+	
+	// ___ Columns Section ___
+
+	.podcast__column::after
+		width: 150px
+		height: 150px
+		right: 10vw
+
+	.column__img
+		max-width: 60vw
+		display: block
+		margin: 0 auto
+		
+	.column__name
+		font-size: 10px
+		line-height: 16px
+		letter-spacing: 4.1px
+
+	.column__text
+		font-size: 14px
+		line-height: 21px
+		letter-spacing: 0
+
+	.podcast__head-title-item
+		font-size: 41px
+		line-height: 49px
+		letter-spacing: 1.29px
+		max-width: 64vw
+
+@media screen and (max-width: 320px)
+
+	.podcast__head-title-item
+		font-size: 34px
+		line-height: 45px
+		letter-spacing: 1.29px
+		max-width: 64vw
+
+	.podcast__head-item
+		font-size: 44px
+		line-height: 34px
+
+	.podcast__item-list 
+		width: 140px
+		height: 140px

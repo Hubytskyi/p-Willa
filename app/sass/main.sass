@@ -1,0 +1,209 @@
+@import config
+
+@import 0-base/404.sass
+@import 0-base/buttons.sass
+
+@import header
+@import footer
+
+@import 1-pages/home
+@import 1-pages/about
+@import 1-pages/podcast
+
+@import 1-pages/media
+@import 1-pages/media-item-first
+@import 1-pages/media-item-second
+@import 1-pages/media-item-third
+@import 1-pages/media-item-featured
+@import 1-pages/contact
+@import 1-pages/consultancy
+@import 1-pages/case-studies
+@import 1-pages/speaking
+@import 1-pages/workshops
+@import 1-pages/terms-policy
+
+
+// CUSTOM USER STYLES
+
+.container
+	max-width: 86.9vw
+
+.container__mini
+	max-width: 80vw
+
+.title
+	font-family: condor
+	font-weight: 700
+	font-size: 1.6vw
+	line-height: 1.9vw
+	letter-spacing: .15vw
+	text-transform: uppercase
+
+.link-stretch
+	letter-spacing: 5px
+	color: $bluecolor
+	font-size: .82vw
+	text-transform: uppercase
+	opacity: .5
+	transition: 0.3s
+	&:hover
+		letter-spacing: 9.15px
+		opacity: 1
+		color: $bluecolor
+
+.title--blue
+	color: $bluecolor
+	letter-spacing: 7px
+	font-size: 1.4vw
+	text-transform: uppercase
+	font-family: poppinssemibold
+
+.go-to__box
+	display: inline-block
+	position: relative
+
+.link__circle
+	font-family: poppinsmedium
+	font-size: 2.55vh
+	line-height: 3.6vh
+	position: relative
+	transition: 0.3s
+	z-index: 42
+	&:hover
+		color: $bluecolor
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		border: 1px solid $bluecolor
+		border-radius: 100%
+		width: 27vh
+		height: 27vh
+
+.circle__text-path
+	font-family: condor
+	font-weight: 700
+	fill: $bluecolor
+	font-size: 6px
+	letter-spacing: 2px
+	text-transform: uppercase
+
+.item__skew--hover
+	transition: 0.3s
+	&::after
+		content: ''
+		background: $bluecolor
+		position: absolute
+		left: 20%
+		bottom: -100%
+		width: 0
+		height: 1px
+		transition: 0.3s
+		transform: skewY(-45deg)
+		transform-origin: left top
+	&:hover:after
+		width: 10vh
+
+.svg-circle
+	transition: 1s ease-out
+	scroll-behavior: smooth
+
+.title__left-block--odd
+	margin: 
+		top: 2.05vw
+		bottom: 2.6vw
+
+.title__right-block--odd
+	max-width: 30vw
+	margin: 
+		top: 2vw
+		bottom: 1.6vw
+
+.title__right-block--even
+	max-width: 33vw
+	margin: 
+		top: 3.9vw
+		bottom: 2.4vw
+
+.title__left-block--even
+	margin: 
+		top: 2vw
+		bottom: 1.7vw
+
+@media screen and (max-width: 1100px)
+
+	.link-stretch
+		font-size: 12px
+		line-height: 18px
+
+	.link__circle
+		font-size: 2vh
+		&::after
+			width: 20vh
+			height: 20vh
+
+	.title--blue
+		font-size: 16px
+
+@media screen and (max-width: 767px)
+	.container
+		max-width: 100vw
+
+	.circle__text-path
+		font-size: 9px
+		letter-spacing: 1px
+
+	.link-stretch
+		font-size: 10px
+		line-height: 16px
+
+	.title--blue
+		font-size: 10px
+		letter-spacing: 4.1px
+
+	.link__circle
+		font-size: 10px
+		color: $bluecolor
+		&::after
+			width: 88px
+			height: 88px
+
+	.go-to-bio
+		display: flex
+		justify-content: flex-end
+		position: static
+		margin:
+			right: 15px
+			top: 63px
+
+	.go-to-media
+		position: static
+		display: flex
+		justify-content: flex-end
+		transform: none
+		margin:
+			right: 15px
+			top: 63px
+
+	.item__skew--hover
+		&::after
+			bottom: 0
+
+	.title
+		font-size: 20px
+		line-height: 27px
+		letter-spacing: 1.8px
+
+	.title__left-block--even
+
+	.title__right-block--odd,
+	.title__left-block--odd,
+	.title__right-block--even,
+	.title__left-block--even
+		max-width: 100%
+		margin: 
+			top: 28px
+			bottom: 28px
+		

@@ -1,0 +1,40 @@
+.page404
+	height: 87.5vh
+
+.block404
+	z-index: 1
+	position: relative
+	height: 87.5vh
+	display: flex
+	align-items: center
+	margin:
+		left: 23.5vh
+	&::before
+		content: ''
+		position: absolute
+		background: $accent
+		width: 44vh
+		height: 44vh
+		left: -21vh
+		border-radius: 100%
+		z-index: -1
+
+.text404
+	font-family: condor
+	font-weight: 700
+	font-size: 4.4vh
+	letter-spacing: .4vh
+
+@media screen and (max-width: 767px)
+
+	.block404
+		padding: 0 15px
+		&::before
+			width: 416px
+			height: 416px
+
+	.text404
+		font-size: 20px
+		line-height: 34px
+		letter-spacing: 1.8px
+		word-break: break-all

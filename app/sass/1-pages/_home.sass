@@ -1,0 +1,351 @@
+// .willa-circle__animation
+// 	transform-origin: center
+
+	
+// __ Welcome Section __
+
+.welcome
+	position: relative
+	padding-top: 14.5vh
+	&__image
+		position: relative
+		&::after
+			content: ''
+			background: $accent
+			width: 22vw
+			height: 22vw
+			border-radius: 100%
+			position: absolute
+			right: 3vw
+			top: 22%
+			z-index: -1
+	&__img
+		max-height: 75vh
+		max-width: 28vw
+	&__text
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+.title.welcome__title
+	font-size: 2.5vw
+	line-height: 2.8vw
+	max-width: 32vw
+	margin: 
+		top: 11vw
+		bottom: 5vw
+
+// __ Podcast Popup __
+
+.podcast__popup
+	position: fixed
+	top: 10vh
+	right: 10vw
+	z-index: 9998
+	&::after
+		content: ''
+		background: $lightcolor
+		position: absolute
+		left: calc(50% - 20px)
+		bottom: calc(50% - 30px)
+		width: 0
+		height: 1px
+		transition: 0.3s
+		transform: skewY(-45deg) translateY(-50%)
+		transform-origin: left bottom
+	&:hover::after
+		width: 50px
+		left: 50%
+		bottom: 22%
+	&:hover .popup__img,
+	&:hover .podcast__popup-inner::after,
+	&:hover .link__circle.link__popup,
+	&:hover .go-to__popup-podcast,
+	&:hover .popup__bg-overlay
+		transform: scale(1.3)
+	&:hover .go-to__popup-podcast
+		top: 55%
+		left: 45%
+
+.popup__title
+	position: absolute
+	top: 10px
+	text-transform: uppercase
+	color: $accent
+	font-size: 18px
+	line-height: 27px
+	letter-spacing: 7.38px
+	z-index: 1
+	left: -74%
+	font-family: poppinssemibold
+	&:hover
+		color: $accent
+
+.podcast__popup-inner
+	position: relative
+
+.popup__bg-overlay
+	background: #4857DF 0% 0% no-repeat padding-box
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	opacity: 0.5
+	transition: 0.3s
+	transform-origin: top left
+
+.popup__img
+	max-width: 154px
+	height: 195px
+	object-fit: cover
+	transition: 0.3s
+	transform-origin: top left
+	// background: $bluecolor
+	// background-blend-mode: overlay 
+
+.go-to__popup-podcast
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	max-width: 64px
+	z-index: 9999
+	transition: 0.3s
+	line-height: normal
+
+.link__circle.link__popup
+	color: $lightcolor
+	font-size: 12px
+	line-height: 0
+	font-family: poppinssemibold
+	z-index: 9999
+	transition: 0.3s
+	&:hover
+		color: $lightcolor
+	&::after
+		border-color: $lightcolor
+		width: 82px
+		height: 82px
+
+// __ Bio Section __
+
+.bio
+	position: relative
+	height: 113vh
+	&__bg
+		width: 50%
+		height: 113vh
+		background-image: url(../images/dest/Def_DSC07000web.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: bottom
+		position: absolute
+		left: 0
+		&::after
+			content: ''
+			position: absolute
+			background: $bluecolor
+			width: 100%
+			height: 100%
+			opacity: 0.5
+	&__box
+		padding-left: 55px
+		margin-top: 22vh
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	&__title
+		margin-bottom: 7.2vh
+	&__text
+		font-size: 1.05vw
+		line-height: 3.3vh
+	&-home
+		margin-top: 16.5vh
+
+.go-to-bio
+	margin:
+		top: 16.4vh
+		right: 56px
+	align-self: flex-end
+
+.bio__willa-circle
+	max-width: 16vw
+	position: absolute
+	top: -8vw
+	left: 50%
+	transform: translateX(-50%)
+	bottom: -16.5vh
+	z-index: 1
+
+// __ Brand Section __
+
+.brands
+	margin:
+		top: 21vh
+		bottom: 14vh
+	&__img
+		max-width: 13vw
+
+// __ Latest Media Section __
+
+.latest-media
+	margin-bottom: 37vh
+	&__title--blue
+		text-align: center
+		margin-bottom: 6.6vh
+
+.go-to-media
+	margin-top: 27vh
+	align-self: center
+
+.media
+	&__img
+		max-width: 100%
+	&__title--left
+		margin: 
+			top: 4.1vh
+			bottom: 1.3vh
+	&__title--right
+		margin:
+			top: 3.3vh
+			bottom: 3.4vh
+	&__subtitle
+		font-size: 1.35vh
+		line-height: 2vh
+
+.home__video-item
+	width: 38.4vh
+	height: 44vh
+
+.media__video
+	margin-top: 5.4vw
+	
+.media__box--right
+	display: flex
+	flex-direction: column
+
+@media screen and (max-width: 1100px)
+
+	.welcome
+		padding-top: 3vh
+		&__img
+			max-width: 77%
+			&::after
+				right: 0
+
+	.bio
+		height: 100%
+		&__bg
+			height: 100%
+		&-home
+			margin-top: 8vh
+		&__box
+			padding:
+				left: 15px
+				bottom: 114px
+			margin-top: 14vh
+		&__text
+			font-size: 1.6vh
+
+	.home__video-item
+		width: 100%
+		height: 30vh
+
+	.brands
+		margin: 80px 0
+
+	.latest-media
+		margin-bottom: 20vh
+
+	.latest-media__title--blue
+		margin-bottom: 31px
+
+	.go-to-media
+		margin-top: 10vh
+
+@media screen and (max-width: 767px)
+
+	// __ Welcome Section __
+
+	.welcome
+		padding-top: 42px
+		&__img
+			max-width: 70vw
+		&__image
+			&::after
+				width: 55vw
+				height: 55vw
+				right: 0
+
+	.title.welcome__title
+		margin:
+			top: 32px
+			bottom: 29px
+		font-size: 20px
+		letter-spacing: 1.8px
+		line-height: 27px
+		max-width: 100%
+
+	// __ Podcast Popup __
+
+	.podcast__popup
+		display: none
+
+	// __ Bio Section __
+
+	.bio
+		height: unset
+		&-home
+			margin-top: 87px
+		&__bg
+			width: 100%
+			height: 399px
+			position: relative
+			background-position: center
+		&__box
+			padding:
+				left: 0
+				bottom: 0
+			margin-top: 31px
+		&__title
+			margin-bottom: 31px
+			font-size: 10px
+			line-height: 16px
+			letter-spacing: 4.1px
+		&__text
+			font-size: 14px
+			line-height: 21px
+			letter-spacing: 0
+
+	.bio__willa-circle
+		max-width: 121px
+		top: -60px
+
+	// __ Brand Section __
+
+	.brands
+		margin:
+			top: 92px
+			bottom: 60px
+		&__img
+			max-width: 100%
+		.col-6:first-child
+			margin-bottom: 40px
+
+	// __ Latest Media Section __
+	
+	.latest-media
+		margin-bottom: 83px
+
+	.latest-media__title--blue
+		text-align: left
+		margin-bottom: 31px
+
+	.media__video
+		margin-top: 31px
+
+	.home__video-item
+		width: 100%
+		height: 409px

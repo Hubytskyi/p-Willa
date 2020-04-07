@@ -1,0 +1,139 @@
+// IMPORT SECTION
+
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss" // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss" // Bootstrap Breakpoints mixin
+@import "node_modules/bootstrap/scss/bootstrap-grid.scss" // Optional Bootstrap Grid
+// @import "node_modules/bootstrap/scss/utilities/_sizing.scss" // Optional Bootstrap Utilites
+
+// USER VARIABLES SECTION
+
+$accent:     #F7B1B3 // Accent Color
+$fontsize:   1.705vh // Body Font Size
+$textcolor:  #222 // Text Color
+$lightcolor:  #F4E2E3 // Text Color / BG Color
+$bluecolor:  #4857DF // Blue Color
+$mainfamily: poppinsregular // Main Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// FONTS LOAD SECTION
+
+@import url("https://p.typekit.net/p.css?s=1&k=nla8fyy&ht=tk&f=30271.30272.30275.30276.30283.30284.30287.30288.30295.30296.30299.30300.30307.30308.30311.30312.30319.30320.30323.30324.37515.37516.37521.37522&a=28018117&app=typekit&e=css");
+
+@font-face
+	font-family: "condor"
+	src: url("https://use.typekit.net/af/f47187/00000000000000003b9ae487/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f47187/00000000000000003b9ae487/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f47187/00000000000000003b9ae487/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype")
+	font-display: auto
+	font-style: normal
+	font-weight: 400
+
+@font-face
+	font-family: "condor"
+	src: url("https://use.typekit.net/af/03e30e/00000000000000003b9ae48a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/03e30e/00000000000000003b9ae48a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/03e30e/00000000000000003b9ae48a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype")
+	font-display: auto
+	font-style: normal
+	font-weight: 700
+
+@font-face
+	font-family: 'poppinsextralight'
+	src: url('../fonts/Poppins/poppins-extralight-webfont.woff2') format('woff2')
+
+@font-face
+	font-family: 'poppinslight'
+	src: url('../fonts/Poppins/poppins-light-webfont.woff2') format('woff2')
+
+@font-face
+	font-family: 'poppinsmedium'
+	src: url('../fonts/Poppins/poppins-medium-webfont.woff2') format('woff2')
+
+@font-face
+	font-family: 'poppinsregular'
+	src: url('../fonts/Poppins/poppins-regular-webfont.woff2') format('woff2')
+
+@font-face
+	font-family: 'poppinssemibold'
+	src: url('../fonts/Poppins/poppins-semibold-webfont.woff2') format('woff2')
+
+@font-face
+	font-family: 'poppinsitalic'
+	src: url('../fonts/Poppins/poppins-italic-webfont.woff2') format('woff2')
+
+@font-face
+	font-family: 'gothambold'
+	src: url('../fonts/Gotham/gothambold-webfont.woff2') format('woff2')
+
+@font-face
+	font-family: 'gothammedium'
+	src: url('../fonts/Gotham/gothammedium-webfont.woff2') format('woff2')
+
+@font-face
+	font-family: 'fahkwangbold'
+	src: url('../fonts/Fahkwang/fahkwang-bold-webfont.woff2') format('woff2')
+
+
+// GENERAL DOCUMENT STYLES
+
+::-webkit-scrollbar
+	width: 3px
+
+::-webkit-scrollbar-button
+	display: none
+
+::-webkit-scrollbar-track
+	width: 3px
+
+::-webkit-scrollbar-track-piece
+	width: 3px
+
+::-webkit-scrollbar-thumb
+	width: 3px
+	background: #0F1626
+
+::-webkit-scrollbar-corner
+	width: 3px
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: $bluecolor
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 3.3vh
+	font-family: poppinsregular
+	font-weight: normal
+	overflow-x: hidden
+	color: $textcolor
+	background-color: $lightcolor
+	-webkit-font-smoothing: antialiased
+
+ul
+	list-style: none
+	margin-bottom: 0
+
+a
+	text-decoration: none
+	color: $textcolor
+	&:hover
+		text-decoration: none
+		color: $textcolor
+

@@ -1,0 +1,8 @@
+/node_modules/
+/.git/
+/**/Thumbs.db
+/**/*.DS_Store
+/app/sass/1-home/
+/app/sass/2-about/
+/app/sass/3-podcast/
+/app/sass/4-media/

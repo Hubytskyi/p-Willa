@@ -1,0 +1,197 @@
+.header
+	margin-top: 5px
+	
+.logo-img
+	max-height: 10vh
+
+.menu
+	height: 100%
+	display: flex
+	align-items: center
+	&__list
+		display: flex
+		justify-content: flex-end
+		width: 100%
+	&__link
+		padding: 0 10px
+		position: relative
+		color: $textcolor
+		font-size: 1.8vh
+		font-family: poppinslight
+		white-space: nowrap
+		&:hover
+			text-decoration: none
+			color: $textcolor
+	&__link--active
+		color: $bluecolor
+		&:hover
+			color: $bluecolor
+
+.menu__list-item
+	position: relative
+
+.submenu__list
+	position: absolute
+	opacity: 1
+	top: 3.2vh
+	z-index: 9999
+	transition: opacity 0.3s
+	visibility: hidden
+	background: $lightcolor
+	padding: 0 10px
+	.menu__link
+		font-size: 1.5vh
+
+.item__skew--hover.menu__link
+	&:after
+		width: 0
+		top: 50%
+		transition: .5s
+		left: 50%
+		transform: skewY(-45deg) translateX(-50%)
+	&:hover:after
+		width: 2vw
+
+.mobile-menu__btn
+	font-size: 16px
+	font-family: poppinslight
+	cursor: pointer
+
+@media screen and (max-width: 1100px)
+
+	.logo-img
+		max-width: 80%
+
+	.menu
+		&__link
+			padding: 0 8px
+			font-size: 1.4vh
+
+	.submenu__list
+		.menu__link
+			font-size: 13px
+
+@media screen and (min-width: 768px)
+	
+	.mobile-menu__btn
+		display: none
+
+	.menu__list--submenu:hover .submenu__list
+		opacity: 1
+		visibility: visible
+
+	.menu__list-item
+		opacity: 1!important
+
+@media screen and (max-width: 767px)
+
+	.header
+		position: relative
+		z-index: 9999
+		.col-8
+			z-index: 99999
+
+	.logo-img
+		max-width: 50vw
+
+	.menu
+		position: relative
+
+	.submenu__list
+		.menu__link
+			font-size: 1.6vh
+
+	.menu__list
+		display: none
+		
+	.mobile-menu__btn
+		display: block
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 52
+
+	.menu__list
+		background: $lightcolor
+		position: fixed
+		top: 0
+		left: 0
+		height: 100vh
+		width: 100%
+		z-index: 51
+		padding-left: 15px
+		display: flex
+		justify-content: flex-start
+		flex-direction: column
+		visibility: hidden
+		transition: 0.3s
+		opacity: 0
+		padding-top: 20vh
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 416px
+			height: 416px
+			background: $accent
+			border-radius: 100%
+			z-index: -1
+
+	.menu__list-mobile--open
+		visibility: visible
+		opacity: 1
+		z-index: -1
+		overflow: auto
+
+	.menu__link
+		font-family: condor
+		font-weight: 700
+		font-size: 20px
+		line-height: 27px
+		letter-spacing: 1.8px
+		text-transform: uppercase
+	
+	.menu__list-item
+		margin: 3vh 0
+
+	.submenu__list
+		background: none
+		padding-left: 73px
+		visibility: hidden
+		opacity: 0
+		height: 0
+		transition: 0.3s
+
+	.sub-mobile--open
+		visibility: visible
+		opacity: 1
+		height: 100%
+		position: static
+
+	.submenu__list-item:first-child
+		margin-top: 9px
+
+	.submenu__list-item
+		margin-bottom: 9px
+		&:last-child
+			margin-bottom: 0
+		.menu__link
+			font-size: 10px
+			color: $bluecolor
+			line-height: 16px
+			letter-spacing: 4.1px
+			text-transform: uppercase
+			font-family: poppinssemibold
+
+	.menu__list-item
+		opacity: 0
+
+	@keyframes menuItemAnim
+		from
+			opacity: 0
+			left: 30px
+		to
+			opacity: 1
+			left: 0
