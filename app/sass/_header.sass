@@ -5,11 +5,14 @@
 	max-height: 10vh
 
 .logo-link__about
-	color: #ffb2b2
-	font-family: condor
-	font-weight: 700
-	text-transform: uppercase
-	line-height: 100%
+	.logo-text
+		color: $bluecolor
+		font-family: condor
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 100%
+		&:hover
+			color: $bluecolor
 
 .menu
 	height: 100%
@@ -90,6 +93,10 @@
 	.menu__list-item
 		opacity: 1!important
 
+	.logo-link__about
+		.logo-text
+			display: none
+
 @media screen and (max-width: 767px)
 
 	.header
@@ -101,6 +108,10 @@
 
 	.logo-img
 		max-width: 50vw
+
+	.logo-link__about
+		.logo-img
+			display: none
 
 	.menu
 		position: relative

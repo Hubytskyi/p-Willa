@@ -129,9 +129,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				font-size: ${widthContainer / 8.7}px;
 				line-height: ${widthContainer / 12}px;
 				letter-spacing: ${widthContainer / 87.8}px;`
-			logoAbout.style=`
-				font-size: ${widthContainer / 9.5}px;
-				letter-spacing: ${widthContainer / 87.8}px;`
 		} else if (document.body.clientWidth <= 414){
 			bioHeader.style=`
 				font-size: ${widthContainer / 9.4}px;
