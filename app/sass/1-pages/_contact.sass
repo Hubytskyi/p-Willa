@@ -13,21 +13,29 @@
 		width: 22vw
 		height: 22vw
 		left: -11vw
-		top: -1vw
+		top: 1vw
 		border-radius: 100%
 		z-index: -1
 
 .contacts__text
-	font-size: 1.1vw
+	font-size: 1.4vw
 	margin-bottom: 1.3vw
 
 .contacts__email
 	font-family: condor
 	font-weight: 700
-	font-size: 2.2vw
+	font-size: 1.4vw
 	letter-spacing: .4vh
 	margin: 
 		top: 3.6vw
+
+.contacts__phone
+	font-family: condor
+	font-size: 1.4vw
+	font-weight: 700
+	letter-spacing: .4vh
+	margin: 
+		top: 1vw
 		bottom: 2.3vw
 
 .contacts__email:last-child
@@ -43,11 +51,9 @@
 	font-family: condor
 	font-size: 10vw
 	font-weight: 700
-	// text-align: center
 	color: $accent
 	letter-spacing: .5vw
 	line-height: 100%
-	// margin-top: 5vw
 	position: relative
 	top: 5vw
 	display: inline
@@ -61,10 +67,6 @@
 		right: -2vw
 		border-radius: 100%
 
-// .contacts__hello--dot
-// 	font-size: 10vw
-// 	color: $bluecolor
-
 @media screen and (max-width: 1100px)
 	.contacts__block
 		height: 50vh
@@ -74,11 +76,11 @@
 	.contacts__block
 		margin: 80px 0 0
 		padding: 0 15px
-		height: 63vh
+		height: 70vh
 		&::before
 			width: 416px
 			height: 416px
-			top: -50px
+			top: 0
 			left: -208px
 
 	.contacts__text
@@ -92,9 +94,20 @@
 		letter-spacing: 1.8px
 		word-break: break-all
 		margin: 
-			top: 7.5vh
-			bottom: 5vh
+			top: 10vw
+
+	.contacts__phone
+		font-size: 20px
+		font-weight: 700
+		letter-spacing: 1.8px
+		margin: 
+			top: 2vw
+			bottom: 10vw
 
 	.contacts__hello
 		font-size: 25vw
 		margin-top: 10vw
+		&::before
+			right: -5vw
+			width: 5vw
+			height: 5vw

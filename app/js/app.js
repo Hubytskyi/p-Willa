@@ -121,14 +121,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// __ Title size for About Page __
 	const bioHeader = document.querySelector('.bio__header')
+	const logoAbout = document.querySelector('.logo-link__about')
 	const widthContainer = document.querySelector('.container').clientWidth
 	if(bioHeader){
 		if(document.body.clientWidth >= 768){
-			bioHeader.style=`font-size: ${widthContainer / 7.7}px; line-height: ${widthContainer / 9.3}px`;
+			bioHeader.style=`
+				font-size: ${widthContainer / 8.7}px;
+				line-height: ${widthContainer / 12}px;
+				letter-spacing: ${widthContainer / 87.8}px;`
+			logoAbout.style=`
+				font-size: ${widthContainer / 9.5}px;
+				letter-spacing: ${widthContainer / 87.8}px;`
 		} else if (document.body.clientWidth <= 414){
-			bioHeader.style=`font-size: ${widthContainer / 8.4}px; line-height: ${widthContainer / 9.5}px`;
+			bioHeader.style=`
+				font-size: ${widthContainer / 9.4}px;
+				line-height: ${widthContainer / 12}px;
+				letter-spacing: ${widthContainer / 88}px;`
+			logoAbout.style=`
+				font-size: ${widthContainer / 9.5}px;
+				letter-spacing: ${widthContainer / 87.8}px;`
 		} else {
-			bioHeader.style=`font-size: ${widthContainer / 8}px; line-height: ${widthContainer / 9.3}px`;
+			bioHeader.style=`
+				font-size: ${widthContainer / 9}px;
+				line-height: ${widthContainer / 10.5}px;
+				letter-spacing: ${widthContainer / 86}px;`;
+			logoAbout.style=`
+				font-size: ${widthContainer / 9.5}px;
+				letter-spacing: ${widthContainer / 87.8}px;`
 		}
 	}
 
