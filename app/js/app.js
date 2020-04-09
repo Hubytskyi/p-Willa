@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		if(document.body.clientWidth >= 768){
 			bioHeader.style=`
 				font-size: ${widthContainer / 10}px;
-				line-height: ${widthContainer / 15}px;
+				line-height: ${widthContainer / 11}px;
 				letter-spacing: ${widthContainer / 45}px;`
 		} else if (document.body.clientWidth <= 414){
 			bioHeader.style=`
