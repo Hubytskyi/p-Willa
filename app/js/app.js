@@ -126,13 +126,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	if(bioHeader){
 		if(document.body.clientWidth >= 768){
 			bioHeader.style=`
-				font-size: ${widthContainer / 8.7}px;
-				line-height: ${widthContainer / 12}px;
-				letter-spacing: ${widthContainer / 87.8}px;`
+				font-size: ${widthContainer / 10}px;
+				line-height: ${widthContainer / 15}px;
+				letter-spacing: ${widthContainer / 45}px;`
 		} else if (document.body.clientWidth <= 414){
 			bioHeader.style=`
 				font-size: ${widthContainer / 9.4}px;
-				line-height: ${widthContainer / 12}px;
+				line-height: ${widthContainer / 15}px;
 				letter-spacing: ${widthContainer / 88}px;`
 			logoAbout.style=`
 				font-size: ${widthContainer / 9.5}px;
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		} else {
 			bioHeader.style=`
 				font-size: ${widthContainer / 9}px;
-				line-height: ${widthContainer / 10.5}px;
+				line-height: ${widthContainer / 15}px;
 				letter-spacing: ${widthContainer / 86}px;`;
 			logoAbout.style=`
 				font-size: ${widthContainer / 9.5}px;
