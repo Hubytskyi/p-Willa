@@ -26,7 +26,7 @@
 // CUSTOM USER STYLES
 
 .container
-	max-width: 86.9vw
+	max-width: 87vw
 
 .container__mini
 	max-width: 80vw
@@ -42,7 +42,7 @@
 .link-stretch
 	letter-spacing: 5px
 	color: $bluecolor
-	font-size: .82vw
+	font-size: 0.781vw
 	text-transform: uppercase
 	opacity: .5
 	transition: 0.3s
@@ -54,7 +54,7 @@
 .title--blue
 	color: $bluecolor
 	letter-spacing: 7px
-	font-size: 1.4vw
+	font-size: 0.938vw
 	text-transform: uppercase
 	font-family: poppinssemibold
 
@@ -64,8 +64,8 @@
 
 .link__circle
 	font-family: poppinsmedium
-	font-size: 2.55vh
-	line-height: 3.6vh
+	font-size: 1.2vw
+	line-height: 1.5vw
 	position: relative
 	transition: 0.3s
 	z-index: 42
@@ -79,15 +79,15 @@
 		transform: translate(-50%, -50%)
 		border: 1px solid $bluecolor
 		border-radius: 100%
-		width: 256px
-		height: 256px
+		width: 250px
+		height: 250px
 
 .circle__text-path
 	font-family: condor
 	font-weight: 700
 	fill: $bluecolor
-	font-size: 6px
-	letter-spacing: 2px
+	font-size: 8px
+	letter-spacing: 1px
 	text-transform: uppercase
 
 .item__skew--hover
@@ -104,7 +104,7 @@
 		transform: skewY(-45deg)
 		transform-origin: left top
 	&:hover:after
-		width: 10vh
+		width: 5vw
 
 .svg-circle
 	transition: 1s ease-out
@@ -132,20 +132,50 @@
 		top: 2vw
 		bottom: 1.7vw
 
-@media screen and (max-width: 1100px)
+@media screen and (max-width: 1600px)
+	.link__circle
+		&::after
+			width: 220px
+			height: 220px
+
+@media screen and (max-width: 1400px)
+	.link__circle
+		&::after
+			width: 200px
+			height: 200px
+
+	.item__skew--hover
+		&::after
+			bottom: -100%
 
 	.link-stretch
-		font-size: 12px
-		line-height: 18px
+		font-size: 1.071vw
 
+@media screen and (max-width: 1200px)
 	.link__circle
-		font-size: 2vh
 		&::after
 			width: 180px
 			height: 180px
 
-	.item__skew--hover::after
-		left: 10%
+	.item__skew--hover
+		&::after
+			bottom: -80%
+
+@media screen and (max-width: 1100px)
+
+	.link-stretch
+		font-size: 1.210vw
+		line-height: 1.815vw
+
+	.link__circle
+		font-size: 1.5vw
+		&::after
+			width: 160px
+			height: 160px
+
+	.item__skew--hover
+		&::after
+			bottom: -60%
 
 	.title--blue
 		font-size: 16px
@@ -192,7 +222,7 @@
 
 	.item__skew--hover
 		&::after
-			bottom: 0
+			display: none
 
 	.title
 		font-size: 20px

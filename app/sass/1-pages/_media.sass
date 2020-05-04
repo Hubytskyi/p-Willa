@@ -1,4 +1,36 @@
-// ___ Commoon styles Media Page ___
+// New styles
+.media-blocks
+	padding-top: 5.885vw//113
+	padding-bottom: 13.021vw//250
+	
+.media-block img
+	max-width: 100%
+
+.media-block iframe
+	width: 18.750vw//360
+	height: 22.031vw//423
+
+.media__title
+	padding: 2.083vw 0//40 0
+	max-width: 30.729vw
+
+.media-block--first img,
+.media-block--third img
+	max-width: 30.729vw
+
+.media-block--second
+	padding-top: 5vw
+	padding-bottom: 10vw
+
+.media-block--third
+	padding-top: 15vw
+
+.media-block--fourth
+	margin-top: -5vw
+
+.media__link-stretch
+	margin-top: 1vw
+	display: block
 
 .media__subtitle--cursor
 	font-family: poppinsitalic
@@ -6,136 +38,67 @@
 	line-height: 1.6vw
 	margin-bottom: 0
 	max-width: 23vw
-
-.media__block-inner-img
-	max-width: 100%
-
-.media__link-stretch
-	margin-top: 1vw
 	display: block
-// __ Odd Sections __
 
-.media__block--odd
-	margin-top: 5.8vw
-
-.media__title--blue
-	margin:
-		top: 5vh
-		bottom: 5vh
-
-.media__block--right-odd
-	margin:
-		top: 5vw
-		left: 3.4vw
-
-// __ Even Sections __
-
-.media__block--left-even
-	margin-top: 23.5vw
-
-.media__block--right-even
-	margin-top: -9.3vw
-
-.media__block--even
-	margin-bottom: 12.7vw
-
-// ___ Featured Section ___
-
-.media__featured
-	margin-bottom: 7.7vw
+.media-block--full
+	margin-top: 11.563vw//222
+	margin-bottom: 7.292vw//140
 	position: relative
 
-.media__featured--top
+.media-block--full-title
 	position: absolute
-	top: 0
 	color: #fff
 	font-family: poppinssemibold
 	font-size: 1vw
 	letter-spacing: .2vw
-	top: 5vw
-	left: 15vw
+	top: 4.844vw//93
+	left: 7.292vw//140
 	z-index: 42
 	text-transform: uppercase
+	max-width: 12vw
 	&::after
 		position: absolute
 		content: ''
 		background: $bluecolor
-		width: 20vw
-		height: 20vw
+		width: 19.063vw//366
+		height: 19.063vw//366
 		left: 50%
 		top: 50%
 		transform: translate(-50%, -50%)
 		border-radius: 100%
 		z-index: -1
-		
-.media__featured-title
-	max-width: 60vh
-	margin: 
-		top: 7.6vh
-		bottom: 3.3vh
 
-// Media Item 
+@media screen and (max-width: 992px)
+	
+	.media-block
+		margin-bottom: 5vw
 
-.media-item__gallery img
-	width: 100%
+	.media-block iframe
+		width: 100%
+		height: 40vw
 
-.media-item__gallery--one
-	width: 100%
-	padding: 0 15px
+	.media__title
+		max-width: 100%
 
-@media screen and (max-width: 1100px)
+	.media-block--second,
+	.media-block--third,
+	.media-block--fourth
+		padding: 0
 
-	.media__block--right-even
+	.media-block--first img,
+	.media-block--third img
+		max-width: 100%
+
+	.media-block--fourth
 		margin-top: 0
 
-@media screen and (max-width: 767px)
-	.media__featured--top
-		left: 38px
-		font-size: 10px
-		line-height: 16px
-		letter-spacing: 4.1px
-		top: 9px
-		&::after
-			width: 69px
-			height: 69px
-			left: 12px
-
-	.media__block--odd
-		margin-top: 40px
-
-	.media__block--even
-		margin-bottom: 9vh
-	
-	.media__block--right-odd
-		margin: 0
-
-	.media__block-inner-img
+	.media-block img
 		width: 100%
-		height: 62vh
-		object-fit: cover
-		// object-position: right
 
-	.media__featured
-		margin-bottom: 0
+	.media-block--full
+		margin-top: 0
 
-	.media__featured-img
-		height: 37.5vh
-
-	.media__block--right-even
-		margin-top: 31px
-
-	.media__block--left-even
-		margin:
-			top: 16px
-			bottom: 16px
-
-	.media__block--right-odd,
-	.media__block--left-odd,
-	.media__block--right-even,
-		margin: 
-			top: 16px
-			bottom: 16px
-
+@media screen and (max-width: 768px)
 	.swiper-button-next
 		outline: none
 

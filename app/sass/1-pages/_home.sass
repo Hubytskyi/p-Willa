@@ -20,6 +20,7 @@
 		max-height: 75vh
 		max-width: 28vw
 		width: 100%
+		object-fit: cover
 	&__text
 		height: 100%
 		display: flex
@@ -59,12 +60,10 @@
 	&:hover .popup__img,
 	&:hover .podcast__popup-inner::after,
 	&:hover .link__circle.link__popup,
+	&:hover .popup-circle,
 	&:hover .go-to__popup-podcast,
 	&:hover .popup__bg-overlay
 		transform: scale(1.3)
-	&:hover .go-to__popup-podcast
-		top: 55%
-		left: 45%
 
 .popup__title
 	position: absolute
@@ -106,46 +105,77 @@
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
-	max-width: 64px
+	width: 55px
+	height: 55px
+	display: flex
+	align-items: center
 	z-index: 9999
 	transition: 0.3s
 	line-height: normal
 
-.link__circle.link__popup
+.popup-circle
+	border: 1px solid $lightcolor
+	width: 82px
+	height: 82px
+	border-radius: 100%
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	transition: 0.3s
+	transform-origin: right bottom
+
+.link__popup
 	color: $lightcolor
-	font-size: 12px
-	line-height: 17px
+	font-size: 11px
+	line-height: 100%
 	font-family: poppinssemibold
 	z-index: 9999
 	transition: 0.3s
 	&:hover
 		color: $lightcolor
-	&::after
-		border-color: $lightcolor
-		width: 82px
-		height: 82px
 
 // __ Bio Section __
+
+// .bio
+// 	position: relative
+// 	height: 113vh
+// 	&__bg
+// 		height: 113vh
+// 		position: absolute
+// 		left: 0
+// 		.bio__img
+// 			width: 50%
+// 		&::after
+// 			content: ''
+// 			position: absolute
+// 			background: $bluecolor
+// 			width: 100%
+// 			height: 100%
+// 			opacity: 0.5
+
+.bio__bg-container
+	position: absolute
+
+.bio__bg
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		background: $bluecolor
+		width: 50vw
+		height: 100%
+		opacity: 0.5
+		left: 0
+
+.bio__img
+	width: 50vw
+	height: 113vh
+	object-fit: cover
 
 .bio
 	position: relative
 	height: 113vh
-	&__bg
-		width: 50%
-		height: 113vh
-		background-image: url(../images/dest/Def_DSC07000web.png)
-		background-size: cover
-		background-repeat: no-repeat
-		background-position: bottom
-		position: absolute
-		left: 0
-		&::after
-			content: ''
-			position: absolute
-			background: $bluecolor
-			width: 100%
-			height: 100%
-			opacity: 0.5
 	&__box
 		padding-left: 55px
 		margin-top: 22vh
@@ -210,8 +240,12 @@
 			top: 3.3vh
 			bottom: 3.4vh
 	&__subtitle
-		font-size: 1.35vh
-		line-height: 2vh
+		font-size: 12px
+		line-height: 20px
+	p
+		margin-bottom: 0
+	.link-stretch__media-home
+		margin-top: 1vw
 
 .home__video-item
 	width: 38.4vh
@@ -237,9 +271,9 @@ span.link-stretch
 				right: 0
 
 	.bio
-		height: 100%
-		&__bg
-			height: 100%
+		height: 95vh
+		&__img
+			height: 95vh
 		&-home
 			margin-top: 8vh
 		&__box
@@ -301,10 +335,12 @@ span.link-stretch
 		&-home
 			margin-top: 87px
 		&__bg
+			position: static
+			&::after
+				width: 100%
+		&__img
 			width: 100%
 			height: 399px
-			position: relative
-			background-position: center
 		&__box
 			padding:
 				left: 0

@@ -21,6 +21,11 @@
 	margin-top: 30vh
 	z-index: 998
 
+.item__skew--hover.podcast__item-list
+	&::after
+		left: 0
+		bottom: -120%
+
 .podcast__head-title-item
 	font-size: 6.15vw
 	max-width: 36vw
@@ -92,22 +97,20 @@
 
 .podcast__items
 	display: flex
-	flex-direction: column-reverse
+	flex-direction: column
 	
 .podcast__item-container
 	color: #fff
 	background: $bluecolor
 	position: relative
 	margin-bottom: 10.7vw
-	margin-top: 2vw
 
-.podcast__item-container
-	&:first-child
-		margin-top: 0
-		margin-bottom: 3.5vw
+.podcast__item-container:last-child 
+	margin-bottom: 0
 
 .podcast__item--left
 	padding: 3.5vw 0 3.5vw 7vw
+	min-height: 26.854vw
 
 .podcast__episode
 	font-family: poppinssemibold
@@ -151,14 +154,14 @@
 
 .podcast__item-list
 	position: absolute
-	right: 3vh
+	right: 2vw
 	overflow: hidden
 	z-index: 998
 	background: #F7B1B3
 	height: 24vw
 	width: 24vw
 	border-radius: 100%
-	margin-top: -2vh
+	margin-top: -2vw
 
 .podcast__item-elem
 	font-size: 3.5vw
@@ -238,6 +241,8 @@
 .column
 	&__img
 		width: 100%
+		max-height: 20.833vw
+		object-fit: cover
 	&__name
 		margin: 1.8vw 0
 		font-size: 1vw
@@ -287,6 +292,9 @@
 			height: 163px
 			top: 7vh
 
+	.podcast__item--right
+		top: 2vw
+
 	.podcast__head-title
 		margin-top: 85px
 		padding-left: 15px
@@ -314,7 +322,7 @@
 	.podcast__text
 		max-width: 100%
 		text-align: left
-		margin: 31px 0 50px 0
+		margin: 31px 0 100px 0
 	
 	.podcast__text-descr
 		margin-top: 31px
@@ -364,6 +372,7 @@
 		right: 0
 		width: 160px
 		height: 160px
+		top: -5vw
 	
 	.podcast__item-elem
 		font-size: 24px
@@ -396,6 +405,7 @@
 		max-width: 60vw
 		display: block
 		margin: 0 auto
+		max-height: 100%
 		
 	.column__name
 		font-size: 10px
