@@ -96,41 +96,19 @@
 		content: ''
 		background: $bluecolor
 		position: absolute
-		left: 20%
-		bottom: -100%
+		left: 0
+		bottom: 50%
 		width: 0
 		height: 1px
 		transition: 0.3s
-		transform: skewY(-45deg)
-		transform-origin: left top
+		transform: rotate(-45deg)
+		transform-origin: center
 	&:hover:after
-		width: 5vw
+		width: 100%
 
 .svg-circle
 	transition: 1s ease-out
 	scroll-behavior: smooth
-
-.title__left-block--odd
-	margin: 
-		top: 2.05vw
-		bottom: 2.6vw
-
-.title__right-block--odd
-	max-width: 30vw
-	margin: 
-		top: 2vw
-		bottom: 1.6vw
-
-.title__right-block--even
-	max-width: 33vw
-	margin: 
-		top: 3.9vw
-		bottom: 2.4vw
-
-.title__left-block--even
-	margin: 
-		top: 2vw
-		bottom: 1.7vw
 
 @media screen and (max-width: 1600px)
 	.link__circle
@@ -144,10 +122,6 @@
 			width: 200px
 			height: 200px
 
-	.item__skew--hover
-		&::after
-			bottom: -100%
-
 	.link-stretch
 		font-size: 1.071vw
 
@@ -156,10 +130,6 @@
 		&::after
 			width: 180px
 			height: 180px
-
-	.item__skew--hover
-		&::after
-			bottom: -80%
 
 @media screen and (max-width: 1100px)
 
@@ -172,10 +142,6 @@
 		&::after
 			width: 160px
 			height: 160px
-
-	.item__skew--hover
-		&::after
-			bottom: -60%
 
 	.title--blue
 		font-size: 16px

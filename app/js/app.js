@@ -6,6 +6,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	const menuLinkMobOpen = document.querySelectorAll('.menu__list--submenu')
 	const subMenuListMob = document.querySelectorAll('.submenu__list')
 
+	const menuLinkAll = document.querySelectorAll('.menu__link')
+	menuLinkAll.forEach( menuLinkAll => {
+		const location = window.location.href
+		const link = menuLinkAll.href
+		if(location == link) {
+			menuLinkAll.classList.add('menu__link--active')
+		} 
+	})
+
 	// __ Start Menu work and animation __
 	let menuOpen = false
 	menuBtn.addEventListener('click', () => {
